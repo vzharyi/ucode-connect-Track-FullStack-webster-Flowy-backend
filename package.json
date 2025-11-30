@@ -10,6 +10,7 @@
     "docker:view": "docker ps -a",
     "docker:stop": "docker-compose stop",
     "docker:down": "docker-compose down -v",
+    "postinstall": "prisma generate",
     "build": "nest build",
     "setup:db": "ts-node src/db/setup-database.ts",
     "migrate": "dotenv -e .env.development -- npx prisma migrate deploy",
