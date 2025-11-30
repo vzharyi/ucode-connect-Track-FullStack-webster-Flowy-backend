@@ -23,7 +23,7 @@ import {
 } from './guards/auth.guards';
 import { Request as ExpressRequest, Response } from 'express';
 import { UserId } from '../../core/decorators/user.decorator';
-import { RefreshToken } from '../../core/decorators/refresh-token.decorator';
+import { RefreshToken, RefreshTokenPayload } from '../../core/decorators/refresh-token.decorator';
 import {
     ApiOperation,
     ApiParam,
