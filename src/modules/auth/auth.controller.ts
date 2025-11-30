@@ -380,8 +380,8 @@ export class AuthController {
         },
     })
     async refreshAccessToken(
-        @RefreshTokenPayload('nonce') nonce: string,
-        @RefreshTokenPayload('createdAt') createdAt: number,
+        @RefreshToken('nonce') nonce: string,
+        @RefreshToken('createdAt') createdAt: number,
         @UserId() userId: number,
     ) {
         return this.authService.refreshAccessToken(userId, createdAt, nonce);
@@ -460,7 +460,7 @@ export class AuthController {
     })
     async logout(
         @UserId() userId: number,
-        @RefreshTokenPayload('nonce') nonce: string,
+        @RefreshToken('nonce') nonce: string,
     ) {
         return this.authService.logout(userId, nonce);
     }
